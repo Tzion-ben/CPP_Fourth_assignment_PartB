@@ -18,5 +18,4 @@ namespace pandemic {
                 Essen, London, Milan, StPetersburg,
                 Manila, Taipei, Moscow, Sydney,Johannesburg,
                 Kinshasa, Lagos, Santiago, NewYork,Osaka, Tokyo};
-    
     }

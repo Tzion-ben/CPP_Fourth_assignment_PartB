@@ -85,8 +85,19 @@ ostream& pandemic::operator<< (ostream& output, const Board& b){
         for(const auto itConnected : it.second){
             output << Board::_citiesToPrint.at(itConnected) << " | ";
         }
+
         output << "\n------------------------------------------------------------------------------\n\n";
     }
+
+    output << "\n------------------------------------------------------------------------------\n\n";
+    output << "\n------------------------------------------------------------------------------\n\n";
+
+    output << "\nThe cities that have a Research Stations are: \n";
+        for(const auto it : b._citiesResearchStations){
+            output << Board::_citiesToPrint.at(it) << " | ";
+        }
+        
+    output << "\n------------------------------------------------------------------------------\n\n";
 
     return output;
 }

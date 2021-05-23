@@ -13,7 +13,7 @@ OperationsExpert:: OperationsExpert (Board& board, City city)
             : Player(board, city, "OperationsExpert")
                 {}
 
-/*builds a research station*/
+/*builds a research station in any city that he wants*/
 Player& OperationsExpert::build (){
     if(this->_board.GetCitiesResearchStations().find(this->_currentCity)
         == 

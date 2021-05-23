@@ -15,7 +15,7 @@ Virologist:: Virologist (Board &board, City city)
                     // _playerCards.insert(city);
                 }
 
-/*decrementing disease stage in the city*/
+/*decrementing disease stage in every city that he wants*/
 Player& Virologist::treat (City city){
     if(this->_playerCards.find(city) != this->_playerCards.end()
         ||
@@ -23,5 +23,5 @@ Player& Virologist::treat (City city){
         this->Player::treat(city);
         return *this;
     }
-    throw "can't treat in Viro";
+    throw "can't_treat";
 }

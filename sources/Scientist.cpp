@@ -14,7 +14,8 @@ Scientist:: Scientist (Board& board, City city, int n)
                 {}
 
 
-/*discover a new cure for one of the disease*/
+/*discover a new cure for one of the disease with less then 5 cards
+  from the same color*/
 Player& Scientist::discover_cure (Color color){
     if(this->_board.GetCitiesResearchStations().find(this->_currentCity)
         ==

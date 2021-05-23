@@ -23,14 +23,13 @@ namespace pandemic {
             std::map <City,int> _citiesDiseasesStage;/*the level of disease of each city, 0 to inf*/
             std::set <City> _citiesResearchStations;/*adding the city number where we have a research station*/ 
             std::map <Color, bool> _foundCure;/*changing a specific color to true if found a drug for it*/
-
+            
+            /*init to maps to print out Board state*/
             static std::map <City, std::string> _citiesToPrint;
             static std::map <Color, std::string> _colorToPrint;
 
             /*initialization of the data structures that need for the start of the game*/
             void initConnections();
-            /*init convert City enum to String*/
-            void initstringCitiesMap();
            
         public:
             /*default empty constractor, will create an array of integers

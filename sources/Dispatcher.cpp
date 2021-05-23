@@ -15,9 +15,10 @@ Dispatcher::Dispatcher(Board& board, City city)
 
 
 /*Dispatcher can move every city he wants if current city contains a reaserch station
-  if not : move from the current city to the city of some card in his hand*/
+  without throwing a city ,card/
+  if there is no reaserch station: use regular fly_direct method*/
 Player& Dispatcher::fly_direct (City city){
-    if(this->_currentCity == city){throw "can't fly from citu to it self";}
+    if(this->_currentCity == city){throw "can't fly from city to it self";}
 
     if(this->_board.GetCitiesResearchStations().find(this->_currentCity)
         != 

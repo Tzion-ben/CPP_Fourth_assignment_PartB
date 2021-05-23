@@ -14,7 +14,7 @@ GeneSplicer:: GeneSplicer (Board& board, City city)
                 {}
 
 
-/*discover a new cure for one of the disease*/
+/*discover a new cure for one of the disease with any cards of any color*/
 Player& GeneSplicer::discover_cure (Color color){
     if(this->_board.GetCitiesResearchStations().find(this->_currentCity)
         !=

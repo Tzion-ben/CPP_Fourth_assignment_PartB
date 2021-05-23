@@ -6,7 +6,7 @@
 
 namespace pandemic {
 	// Defines a Name of the Color 
-    // Every color represents different disease stage
+    // Every color represents a different disease stage
 	enum class Color {
     	Yellow, Black, Red, Blue, None
 	};

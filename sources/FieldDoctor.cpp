@@ -13,7 +13,8 @@ FieldDoctor:: FieldDoctor(Board& board, City city)
             : Player(board, city, "FieldDoctor")
             {}
 
-/*decrementing disease stage in the city*/
+/*decrementing disease stage in the city, can do it nor only in current city
+  but in every connected city to vurrent city*/
 Player& FieldDoctor::treat (City city){
     /*if the given city is not connected to this->CurrentCity,
     cant treat*/
@@ -22,7 +23,7 @@ Player& FieldDoctor::treat (City city){
     if(city == this->_currentCity){
     if(this->_board[this->_currentCity] != 0){
             if(this->_board.isFoundCure(this->_currentCity)){this->_board[this->_currentCity] = 0;}
-            else{this->_board[this->_currentCity] = _board[this->_currentCity]-1;}
+            else{this->_board[this->_currentCity]--;}
             return *this;
         }
         throw "There is no Infection in the city at all";
@@ -36,7 +37,7 @@ Player& FieldDoctor::treat (City city){
     if(connected){
         if(this->_board[city] != 0){
             if(this->_board.isFoundCure(city)){this->_board[city] = 0;}
-            else{this->_board[city] = _board[city]-1;}
+            else{this->_board[city]--;}
             return *this;
         }
         throw "There is no Infection in the city at all";

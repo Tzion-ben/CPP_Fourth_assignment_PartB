@@ -53,6 +53,6 @@ Player& Medic::fly_shuttle (City city){
 Player& Medic::treat (City city){
     /*no Infection in the city = 0*/
     if(this->_board[city] == 0){throw "There is no Infection in the city at all";}
-    this->_board[this->_currentCity] = 0;
+    this->_board[city] = 0;
     return *this;
 }

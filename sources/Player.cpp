@@ -36,9 +36,9 @@ Player& Player::fly_direct (City city){
     if(city ==this->_currentCity){throw "cant fly from city to it self";}
 
     if(this->_playerCards.find(city) != this->_playerCards.end()){
-    _playerCards.erase(city);
-    this->_currentCity = city;
-    return *this;
+        _playerCards.erase(city);
+        this->_currentCity = city;
+        return *this;
     }
     throw "no have the rigth card"; 
 }
@@ -48,12 +48,11 @@ Player& Player::fly_charter (City city){
     if(city ==this->_currentCity){throw "cant fly from city to it self";}
 
     if(this->_playerCards.find(this->_currentCity) != this->_playerCards.end()){
-    _playerCards.erase(this->_currentCity);
-    this->_currentCity = city;
-    return *this;
+        _playerCards.erase(this->_currentCity);
+        this->_currentCity = city;
+        return *this;
     }
     throw "no have the rigth card";
-    return *this;
 }
 
 /*****************************************************************************/
@@ -119,7 +118,7 @@ Player& Player::treat (City city){
         return *this;
     }
     /*else/ : no have a cure*/
-    this->_board[city] = this->_board[city]-1;
+    this->_board[city]--;
     return *this;
 }
 
